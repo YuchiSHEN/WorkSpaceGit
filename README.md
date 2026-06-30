@@ -1,19 +1,17 @@
-# WorkSpaceGit
-An online workspace for static page.
+# TestSharedWorkSpace
 
-## Publish this page with GitHub Pages
+一个用于协作、分享与持续创造的在线工作空间。
 
-This repository already contains a simple static site in [index.html](index.html).
+## 本地预览
 
-To make it available publicly:
+这是一个无构建依赖的静态网页，可直接打开 `index.html`，或在仓库目录运行：
 
-1. Push this repository to GitHub.
-2. Open the repository on GitHub.
-3. Go to Settings > Pages.
-4. Under Source, choose Deploy from a branch.
-5. Select the main branch and the root folder (/).
-6. Save and wait for GitHub to publish the site.
+```powershell
+python -m http.server 8000
+```
 
-Once published, your site will be available at:
+然后访问 <http://localhost:8000>。
 
-https://<your-username>.github.io/WorkSpaceGit/
+## 在线地址
+
+<https://yuchishen.github.io/WorkSpaceGit/>
