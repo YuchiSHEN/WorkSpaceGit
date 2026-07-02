@@ -38,11 +38,14 @@ intro:
     at ETH Zürich, establishing long-term collaboration across architecture, engineering,
     and computation.
 navigation:
+  - label: Statement
+    href: "#statement"
+  - label: Developments
+    href: "#developments"
   - label: Profile
     href: "#profile"
   - label: Research
     href: "#research"
-  - label: Publications
-    href: "#publications"
-  - label: Developments
-    href: "#developments"
+section:
+  number: "03"
+  title: Profile

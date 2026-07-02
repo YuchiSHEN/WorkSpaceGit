@@ -81,10 +81,58 @@ layout: null
         </dl>
       </section>
 
+      <section class="content-section statement page-grid" id="statement">
+        <div class="section-marker">
+          <span>{{ statement.section.number }}</span>
+          <h2>{{ statement.section.title | escape }}</h2>
+        </div>
+        <div class="section-content statement-copy">
+          {% for paragraph in statement.paragraphs %}<p>{{ paragraph | escape }}</p>{% endfor %}
+          <img
+            class="signature"
+            src="{{ statement.signature | relative_url }}"
+            alt="{{ statement.signature_alt | escape }}"
+            width="{{ statement.signature_width }}"
+            height="{{ statement.signature_height }}"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section class="developments" id="developments" aria-labelledby="developments-title">
+        <header class="developments-header page-grid">
+          <div class="section-marker light">
+            <span>{{ developments.section.number }}</span>
+            <h2 id="developments-title">{{ developments.section.title | escape }}</h2>
+          </div>
+          <p>{{ developments.section.summary | escape }}</p>
+        </header>
+
+        {% for item in developments.items %}
+          <article class="development-card{% if item.reverse %} reverse{% endif %}">
+            <a href="{{ item.url }}" aria-label="Open {{ item.title | escape }} project">
+              <img
+                src="{{ item.image | relative_url }}"
+                alt="{{ item.image_alt | escape }}"
+                width="{{ item.image_width }}"
+                height="{{ item.image_height }}"
+                loading="lazy"
+              />
+              <div>
+                <span>{{ item.index }} / {{ item.category | escape }}</span>
+                <h3>{{ item.title | escape }}</h3>
+                <p>{{ item.description | escape }}</p>
+                <b>{{ item.link_label | escape }}</b>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </section>
+
       <section class="content-section page-grid" id="profile">
         <div class="section-marker">
-          <span>01</span>
-          <h2>Profile</h2>
+          <span>{{ profile.section.number }}</span>
+          <h2>{{ profile.section.title | escape }}</h2>
         </div>
         <div class="section-content profile-intro">
           <p class="lead">{{ profile.intro.lead | escape }}</p>
@@ -195,53 +243,6 @@ layout: null
         </div>
       </section>
 
-      <section class="developments" id="developments" aria-labelledby="developments-title">
-        <header class="developments-header page-grid">
-          <div class="section-marker light">
-            <span>{{ developments.section.number }}</span>
-            <h2 id="developments-title">{{ developments.section.title | escape }}</h2>
-          </div>
-          <p>{{ developments.section.summary | escape }}</p>
-        </header>
-
-        {% for item in developments.items %}
-          <article class="development-card{% if item.reverse %} reverse{% endif %}">
-            <a href="{{ item.url }}" aria-label="Open {{ item.title | escape }} project">
-              <img
-                src="{{ item.image | relative_url }}"
-                alt="{{ item.image_alt | escape }}"
-                width="{{ item.image_width }}"
-                height="{{ item.image_height }}"
-                loading="lazy"
-              />
-              <div>
-                <span>{{ item.index }} / {{ item.category | escape }}</span>
-                <h3>{{ item.title | escape }}</h3>
-                <p>{{ item.description | escape }}</p>
-                <b>{{ item.link_label | escape }}</b>
-              </div>
-            </a>
-          </article>
-        {% endfor %}
-      </section>
-
-      <section class="content-section statement page-grid" id="statement">
-        <div class="section-marker">
-          <span>{{ statement.section.number }}</span>
-          <h2>{{ statement.section.title | escape }}</h2>
-        </div>
-        <div class="section-content statement-copy">
-          {% for paragraph in statement.paragraphs %}<p>{{ paragraph | escape }}</p>{% endfor %}
-          <img
-            class="signature"
-            src="{{ statement.signature | relative_url }}"
-            alt="{{ statement.signature_alt | escape }}"
-            width="{{ statement.signature_width }}"
-            height="{{ statement.signature_height }}"
-            loading="lazy"
-          />
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer page-grid">

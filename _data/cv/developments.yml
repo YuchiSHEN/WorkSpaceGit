@@ -1,5 +1,5 @@
 section:
-  number: "08"
+  number: "02"
   title: Developments
   summary: Research translated into computational design tools.
 items:
@@ -9,7 +9,7 @@ items:
     description: Agent-based simulation linking spatial behavior and performance-based modelling.
     url: "https://www.food4rhino.com/en/app/bsim?lang=en"
     link_label: View project ↗
-    image: assets/bsim.webp
+    image: assets/bsim.gif
     image_alt: BSim agent-based modelling tool interface
     image_width: 1800
     image_height: 817
@@ -19,7 +19,7 @@ items:
     description: Alternative Directional Residual Reduction method and solver for discrete network structures.
     url: "https://github.com/YuchiSHEN/ADRFR"
     link_label: View repository ↗
-    image: assets/adrfr.webp
+    image: assets/adrfr.gif
     image_alt: ADRFR form-finding tool structural model
     image_width: 1800
     image_height: 1318
@@ -30,7 +30,7 @@ items:
     description: Interactive force–form exploration for early-stage architectural structural design.
     url: "https://github.com/computational-structural-design/VGS"
     link_label: View repository ↗
-    image: assets/vgs.webp
+    image: assets/vgs.gif
     image_alt: Vector-based Graphic Statics tool interface
     image_width: 1800
     image_height: 710

@@ -41,6 +41,8 @@ photo: assets/profile.jpg
 
 可以直接替换 `assets/profile.jpg`，文件名和格式保持不变时不需要修改其他文件。项目图片同理由 `developments.yml` 中的 `image` 字段控制。
 
+开发项目的动画素材使用 GIF。替换 `assets/bsim.gif`、`assets/adrfr.gif` 或 `assets/vgs.gif` 后，浏览器会直接播放多帧动画，不需要额外 JavaScript。
+
 ## 自动更新流程
 
 修改并推送到 `main` 后，GitHub Pages 会自动运行 Jekyll、读取 YAML 并生成最终 HTML。通常几十秒内上线。浏览器端加载的是构建后的静态页面，不依赖额外 JavaScript 或第三方 Markdown 解析器。

@@ -1,9 +1,9 @@
 :root {
-  --paper: #f2f1ed;
+  --paper: #ffffff;
   --ink: #121212;
   --muted: #6b6b66;
   --line: #c9c8c1;
-  --red: #e23f2c;
+  --red: #121212;
   --black: #0b0b0b;
   --max-width: 1460px;
   font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans SC", sans-serif;
@@ -23,9 +23,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    linear-gradient(90deg, transparent calc(100% - 1px), rgba(18, 18, 18, 0.035) 1px) 0 0 / 8.333% 100%,
-    var(--paper);
+  background: var(--paper);
   color: var(--ink);
 }
 
@@ -115,32 +113,17 @@ img {
 
 .hero {
   position: relative;
-  min-height: 810px;
-  padding: clamp(80px, 10vw, 150px) 0 76px;
+  min-height: 650px;
+  padding: clamp(60px, 7vw, 96px) 0 52px;
   border-bottom: 1px solid var(--ink);
 }
 
 .hero::before {
-  position: absolute;
-  top: 9%;
-  right: 9%;
-  width: clamp(150px, 22vw, 310px);
-  aspect-ratio: 1;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  content: "";
+  display: none;
 }
 
 .hero::after {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  bottom: 0;
-  width: 50%;
-  height: 36%;
-  background: repeating-linear-gradient(-45deg, transparent 0 7px, rgba(18, 18, 18, 0.12) 8px);
-  clip-path: polygon(24% 100%, 100% 0, 100% 100%);
-  content: "";
+  display: none;
 }
 
 .hero-index {
@@ -166,9 +149,9 @@ img {
 .kicker,
 .eyebrow,
 .rule-label {
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   color: var(--red);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -193,7 +176,7 @@ h1 span:last-child {
 }
 
 .hero-role {
-  margin: 70px 0 0 44%;
+  margin: 44px 0 0 44%;
   font-size: clamp(1.1rem, 2vw, 1.65rem);
   font-weight: 500;
   line-height: 1.18;
@@ -204,21 +187,13 @@ h1 span:last-child {
   position: absolute;
   z-index: 3;
   right: 1.5%;
-  bottom: 75px;
+  bottom: 52px;
   width: clamp(210px, 22vw, 320px);
   margin: 0;
 }
 
 .portrait-frame::before {
-  position: absolute;
-  z-index: -1;
-  top: -14px;
-  left: -14px;
-  width: 55%;
-  height: 55%;
-  border-top: 1px solid var(--red);
-  border-left: 1px solid var(--red);
-  content: "";
+  display: none;
 }
 
 .portrait-frame img {
@@ -226,7 +201,7 @@ h1 span:last-child {
   aspect-ratio: 0.89;
   object-fit: cover;
   object-position: 50% 35%;
-  filter: grayscale(100%) contrast(1.05);
+  filter: none;
 }
 
 .portrait-frame figcaption {
@@ -256,7 +231,7 @@ h1 span:last-child {
 .contact-strip {
   width: min(calc(100% - 48px), var(--max-width));
   margin: 0 auto;
-  padding: 24px 0 80px;
+  padding: 14px 0 42px;
 }
 
 .contact-strip dl {
@@ -266,8 +241,8 @@ h1 span:last-child {
 }
 
 .contact-strip dl > div {
-  min-height: 82px;
-  padding: 4px 22px;
+  min-height: 56px;
+  padding: 2px 18px;
   border-left: 1px solid var(--line);
 }
 
@@ -277,7 +252,7 @@ h1 span:last-child {
 }
 
 dt {
-  margin-bottom: 12px;
+  margin-bottom: 7px;
   color: var(--muted);
   font-size: 0.62rem;
   font-weight: 800;
@@ -292,7 +267,7 @@ dd {
 }
 
 .content-section {
-  padding: 96px 0 120px;
+  padding: 68px 0 84px;
   border-top: 1px solid var(--ink);
   scroll-margin-top: 20px;
 }
@@ -306,7 +281,7 @@ dd {
   display: block;
   margin-bottom: 12px;
   color: var(--red);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 800;
 }
 
@@ -345,7 +320,7 @@ dd {
 .feature-row {
   display: grid;
   grid-template-columns: 2fr 7fr;
-  padding: 25px 0 34px;
+  padding: 20px 0 26px;
   border-top: 1px solid var(--line);
 }
 
@@ -353,7 +328,7 @@ dd {
 .feature-row time,
 .activity-list time {
   color: var(--red);
-  font-size: 0.73rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.06em;
 }
@@ -388,7 +363,7 @@ dd {
   display: grid;
   grid-template-columns: 2fr 7fr;
   gap: 20px;
-  padding: 30px 0 38px;
+  padding: 24px 0 30px;
   border-top: 1px solid var(--line);
 }
 
@@ -431,7 +406,7 @@ dd {
 .publication-list li {
   display: grid;
   grid-template-columns: 90px 1fr;
-  padding: 25px 0 30px;
+  padding: 20px 0 24px;
   border-top: 1px solid var(--line);
   counter-increment: papers;
 }
@@ -470,15 +445,15 @@ dd {
 }
 
 .award-grid article {
-  min-height: 230px;
-  padding: 30px;
+  min-height: 180px;
+  padding: 24px;
   border-right: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
 }
 
 .award-grid article > span {
   display: block;
-  margin-bottom: 70px;
+  margin-bottom: 42px;
   color: var(--red);
   font-size: 0.7rem;
   font-weight: 800;
@@ -493,7 +468,7 @@ dd {
 .activity-list article {
   display: grid;
   grid-template-columns: 110px 1fr;
-  padding: 24px 0 28px;
+  padding: 20px 0 24px;
   border-top: 1px solid var(--line);
 }
 
@@ -504,14 +479,15 @@ dd {
 }
 
 .developments {
-  padding: 110px max(24px, calc((100vw - var(--max-width)) / 2)) 130px;
-  color: #f1f1ee;
-  background: var(--black);
+  padding: 72px max(24px, calc((100vw - var(--max-width)) / 2)) 86px;
+  border-top: 1px solid var(--ink);
+  color: var(--ink);
+  background: var(--paper);
 }
 
 .developments-header {
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 44px;
 }
 
 .section-marker.light {
@@ -523,14 +499,16 @@ dd {
   align-self: end;
   max-width: 480px;
   margin: 0;
-  color: #aaa;
-  font-size: 1.1rem;
+  color: var(--muted);
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 .development-card {
   width: min(100%, var(--max-width));
-  margin: 0 auto 100px;
+  margin: 0 auto 70px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
 }
 
 .development-card:last-child {
@@ -557,18 +535,13 @@ dd {
   width: 100%;
   max-height: 620px;
   object-fit: cover;
-  filter: grayscale(100%);
-  transition: filter 250ms ease;
-}
-
-.development-card a:hover img {
-  filter: grayscale(0%);
+  filter: none;
 }
 
 .development-card span,
 .development-card b {
   color: var(--red);
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -584,14 +557,14 @@ dd {
 .development-card p {
   max-width: 400px;
   margin: 0 0 38px;
-  color: #aaa;
+  color: var(--muted);
   line-height: 1.6;
 }
 
 .statement-copy {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 38px 7%;
+  gap: 28px 6%;
 }
 
 .statement-copy p {
@@ -617,8 +590,8 @@ dd {
 }
 
 .site-footer {
-  min-height: 270px;
-  padding: 54px 0;
+  min-height: 180px;
+  padding: 40px 0;
   border-top: 1px solid var(--ink);
   font-size: 0.73rem;
   font-weight: 700;
@@ -660,8 +633,8 @@ dd {
   }
 
   .hero {
-    min-height: 760px;
-    padding-top: 78px;
+    min-height: 640px;
+    padding-top: 56px;
   }
 
   .hero-index {
@@ -673,7 +646,7 @@ dd {
   }
 
   .hero-role {
-    margin: 52px 0 0 18%;
+    margin: 38px 0 0 18%;
   }
 
   .hero-institution {
@@ -695,7 +668,7 @@ dd {
   }
 
   .contact-strip dl > div {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .section-marker {
@@ -720,15 +693,13 @@ dd {
 
 @media (max-width: 640px) {
   body {
-    background:
-      linear-gradient(90deg, transparent calc(100% - 1px), rgba(18, 18, 18, 0.035) 1px) 0 0 / 25% 100%,
-      var(--paper);
+    background: var(--paper);
   }
 
   .hero {
     display: block;
-    min-height: 780px;
-    padding-top: 64px;
+    min-height: 680px;
+    padding-top: 48px;
   }
 
   .hero-index {
@@ -744,24 +715,24 @@ dd {
   }
 
   .hero-role {
-    margin: 42px 0 0;
+    margin: 30px 0 0;
   }
 
   .hero-institution {
     position: absolute;
-    bottom: 60px;
+    bottom: 44px;
     left: 0;
     width: 48%;
   }
 
   .portrait-frame {
     right: 0;
-    bottom: 54px;
+    bottom: 40px;
     width: 44%;
   }
 
   .contact-strip {
-    padding-bottom: 62px;
+    padding-bottom: 42px;
   }
 
   .contact-strip dl {
@@ -779,11 +750,11 @@ dd {
 
   .content-section {
     display: block;
-    padding: 64px 0 80px;
+    padding: 48px 0 60px;
   }
 
   .section-marker {
-    padding: 0 0 46px;
+    padding: 0 0 30px;
   }
 
   .section-marker h2 {
@@ -817,20 +788,20 @@ dd {
   }
 
   .award-grid article {
-    min-height: 200px;
+    min-height: 170px;
   }
 
   .award-grid article > span {
-    margin-bottom: 50px;
+    margin-bottom: 36px;
   }
 
   .developments {
-    padding: 76px 14px 90px;
+    padding: 52px 14px 64px;
   }
 
   .developments-header {
     display: block;
-    margin-bottom: 54px;
+    margin-bottom: 36px;
   }
 
   .developments-header > p {
@@ -838,7 +809,7 @@ dd {
   }
 
   .development-card {
-    margin-bottom: 76px;
+    margin-bottom: 52px;
   }
 
   .development-card a,
